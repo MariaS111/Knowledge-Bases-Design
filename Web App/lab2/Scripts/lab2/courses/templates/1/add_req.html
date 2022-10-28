@@ -1,0 +1,11 @@
+{% extends 'adding.html' %}
+{% block title %}Adding{{ title }}{% endblock %}
+
+{% block content %}
+<h1 class="t">Adding {{ title }}</h1>
+<form action="{% url 'add_req' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="med">Add {{ title }}</button>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'search.html'%}
+
+
+{% block content %}
+<form action="{% url 'task3' %}" method="post">
+    {% csrf_token %}
+<label for="course_name">Enter particular name of course: </label>
+    <input id="course_name" type="text" name="name_field">
+<label for="date1">Enter particular start date: </label>
+    <input id="date1" type="text" name="date_field1">
+<label for="date2">Enter particular end date: </label>
+    <input id="date2" type="text" name="date_field2">
+    <button type="submit" class="med">Search</button>
+</form>
+{% endblock %}

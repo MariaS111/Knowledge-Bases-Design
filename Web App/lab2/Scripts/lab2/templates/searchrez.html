@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <title>Search</title>
+</head>
+<body>
+<table>
+    <div class="r">
+        {% block content %}
+        {% endblock %}
+    </div>
+<div class = 'k'>
+{% block url %}
+{% endblock %}
+</div>
+</table>
+</body>
+</html>

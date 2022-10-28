@@ -1,0 +1,19 @@
+{% extends 'view.html'%}
+{% block title %}View {{title}} {% endblock %}
+
+{% block content %}
+<div class="r">
+<tr><th><h2>{{item.code}}</h2></th></tr>
+              <tr><td><h3 >{{item.name_of_course}}</h3></td></tr>
+              <tr><td><h3>{{item.date}}</h3></td></tr>
+              <tr><td><h3>{{item.price}}</h3></td></tr>
+              <tr><td><h3>{{item.final_price}}</h3></td></tr>
+</div>
+
+{% endblock %}
+
+    {% block url %}
+
+<p><button class = 'big'><a class="nav-link" href="{{ item.code }}/{{item.name_of_course}}">Establish</a></button></p>
+<p><button class = 'big'><a class="nav-link" href="{%url 'home_pr'%}">Back</a></button></p>
+    {% endblock %}

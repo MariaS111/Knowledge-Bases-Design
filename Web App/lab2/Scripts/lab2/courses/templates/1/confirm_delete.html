@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <title>Deleting</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+
+<h3>Are you sure you want to delete "{{ object }}"?</h3>
+    <button class="med" type="submit" value="Confirm">Confirm</button>
+</form>
+
+</body>
+</html>

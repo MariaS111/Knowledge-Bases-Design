@@ -1,0 +1,13 @@
+{% extends 'searchrez.html'%}
+
+{% block content %}
+{% if r %}
+{% for i in r %}
+<h3>{{i}}</h3>
+{% endfor %}
+{% else %}
+<h1>No results</h1>
+{% endif %}
+{% endblock %}
+
+{% block url %}<p><button class="big"><a class="nav-link" href="{%url 'home_c'%}">Back</a></button></p>{% endblock %}

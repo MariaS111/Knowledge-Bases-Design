@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <title>Title</title>
+</head>
+<body>
+    <button><a href="{%url 'home_c'%}"><h1>Show Courses</h1></a></button>
+   <button><a href="{%url 'home_o'%}"><h1>Show Organizations</h1></a></button>
+    <button><a href="{%url 'home_t'%}"><h1>Show Teachers</h1></a></button>
+    <button><a href="{%url 'home_r'%}"><h1>Show Requests</h1></a></button>
+    <button><a href="{%url 'home_pr'%}"><h1>Show Documents with course prices</h1></a></button>
+
+
+</body>
+</html>

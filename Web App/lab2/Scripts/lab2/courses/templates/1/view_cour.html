@@ -1,0 +1,22 @@
+
+{% extends 'view.html'%}
+{% block title %}View {{title}} {% endblock %}
+
+{% block content %}
+<div class="r">
+<tr><th><h2>{{item.name}}</h2></th></tr>
+              <tr><td><h3 >{{item.code}}</h3></td></tr>
+              <tr><td><h3> {{item.type}}</h3></td></tr>
+              <tr><td><h3> {{item.number_of_days}}</h3></td></tr>
+              <tr><td><h3> {{item.number_of_students}}</h3></td></tr>
+              <tr><td><h3> {{item.price}}</h3></td></tr>
+              <tr><td><h3>{{item.name_of_organization}}</h3></td></tr>
+</div>
+
+{% endblock %}
+
+    {% block url %}
+    <p><button class = 'big'><a class="nav-link" href="{{ item.code }}/update">Edit</a></button></p>
+    <p><button class = 'big'><a class="nav-link" href="{{ item.code }}/delete">Delete</a></button></p>
+    <p><button class = 'big'><a class="nav-link" href="{%url 'home_c'%}">Back</a></button></p>
+    {% endblock %}

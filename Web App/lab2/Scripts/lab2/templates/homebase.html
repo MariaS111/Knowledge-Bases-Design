@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1 class = 't'>{{ title }}</h1>
+<table>
+
+    {% for i in item %}
+    <tr>
+        <td>
+        {% block pk %}
+        <button class = 'small'><a href="{{ i.code }}">{{ i.code }}</a></button>
+        {% endblock %}
+        </td>
+        <td>
+        <h3>{{ i }}</h3>
+     {% endfor %}
+        </td>
+    </tr>
+</table>
+<div class = 'k'>
+{% block url %}URL{% endblock %}
+<button class = 'big'><a  href="{%url 'home1'%}">Back</a></button>
+</div>
+
+</body>
+</html>

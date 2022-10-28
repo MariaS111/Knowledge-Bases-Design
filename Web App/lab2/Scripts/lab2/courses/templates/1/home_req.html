@@ -1,0 +1,5 @@
+{% extends 'homebase.html' %}
+{% block pk %}
+<button ><a href="{{ i.pk }}"> {{ i.pk }}</a></button>
+{% endblock %}
+{% block url %}<button class = 'big'><a class="nav-link" href="{%url 'add_req'%}">Add {{ title1 }}</a></button>{% endblock %}
