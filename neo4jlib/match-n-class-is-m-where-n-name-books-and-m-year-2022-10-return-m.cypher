@@ -1,0 +1,1 @@
+MATCH (n:class)-[:is]-(m)  WHERE n.name = "Books" and m.year < 2022 - 10 RETURN m

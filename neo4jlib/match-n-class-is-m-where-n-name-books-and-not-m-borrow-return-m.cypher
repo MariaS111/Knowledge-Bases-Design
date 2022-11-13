@@ -1,0 +1,1 @@
+MATCH (n:class)-[:is]-(m) WHERE  n.name = "Books" and NOT (m)-[:borrow]-() RETURN m

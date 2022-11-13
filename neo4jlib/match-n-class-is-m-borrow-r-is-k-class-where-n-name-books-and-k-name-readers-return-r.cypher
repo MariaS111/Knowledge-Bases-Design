@@ -1,0 +1,1 @@
+MATCH (n:class)-[:is]-(m)-[:borrow]-(r)-[:is]-(k: class)  WHERE n.name = "Books" and k.name = "Readers" RETURN r
