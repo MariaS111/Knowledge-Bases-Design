@@ -1,0 +1,5 @@
+pip~=21.2.3
+lxml~=4.9.1
+setuptools~=57.4.0
+docutils~=0.19
+Django~=4.1.1
